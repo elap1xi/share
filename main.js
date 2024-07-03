@@ -4,7 +4,7 @@ const app = express();
 app.use(express.json());
 
 app.post('/webhook', (req, res) => {
-    console.log(req.body);
+    console.log(req);
 });
 
 app.listen(8000, () => {
