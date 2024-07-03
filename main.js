@@ -3,7 +3,12 @@ const app = express();
 
 app.use(express.json());
 app.post('/webhook', (req, res) => {
-    console.log(req.body.sender.login);
+    if(req.body.zen){
+        res.status(200).send('ok.');
+    } else {
+        console.log(req.body);
+        res.status(200);
+    }
 });
 
 app.listen(8000, () => {
