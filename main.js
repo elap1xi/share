@@ -4,10 +4,11 @@ const app = express();
 app.use(express.json());
 app.post('/webhook', (req, res) => {
     if(req.body.zen){
+        console.log(req.body);
         res.status(200).send('ok.');
     } else {
         console.log(req.body);
-        res.status(200);
+        res.status(200).send('ok');
     }
 });
 
