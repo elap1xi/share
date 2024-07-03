@@ -3,7 +3,7 @@ const app = express();
 
 app.use(express.json());
 app.post('/webhook', (req, res) => {
-    console.log(req);
+    console.log(req.body.sender.login);
 });
 
 app.listen(8000, () => {
